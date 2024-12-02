@@ -1,0 +1,71 @@
+<MainLayout>:
+    orientation: 'vertical'
+    padding: dp(20)
+    spacing: dp(15)
+    canvas.before:
+        Color:
+            rgba: 0.95, 0.95, 1, 1  # Light background color
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Label:
+        text: "Regisitry ny SS isan-kilasy"
+        font_size: '24sp'
+        bold: True
+        size_hint_y: None
+        height: self.texture_size[1] + dp(10)
+        color: 0.1, 0.4, 0.7, 1
+        text_size: self.width, None  # Makes text wrap if needed
+        halign: 'center'  # Aligns text horizontally
+
+    TextInput:
+        id: kilasy_input
+        hint_text: "kilasy"
+        multiline: False
+        size_hint_y: None
+        height: dp(40)
+        background_color: 1, 1, 1, 1
+        foreground_color: 0, 0, 0, 1
+    
+    TextInput:
+        id: sabata_input
+        hint_text: "Lesona fahafiry?"
+        multiline: False
+        size_hint_y: None
+        height: dp(40)
+        background_color: 1, 1, 1, 1
+        foreground_color: 0, 0, 0, 1
+
+    TextInput:
+        id: mambra_tonga_input
+        hint_text: "Isan'ny mambra tonga"
+        multiline: False
+        size_hint_y: None
+        height: dp(40)
+        background_color: 1, 1, 1, 1
+        foreground_color: 0, 0, 0, 1
+
+    TextInput:
+        id: nianatra_impito_input
+        hint_text: "Isan'ny nianatra im-pito"
+        multiline: False
+        size_hint_y: None
+        height: dp(40)
+        background_color: 1, 1, 1, 1
+        foreground_color: 0, 0, 0, 1
+
+    Button:
+        text: "Tehirizo"
+        size_hint_y: None
+        height: dp(50)
+        background_color: 0.2, 0.6, 0.8, 1
+        color: 1, 1, 1, 1
+        on_press: root.insert_user()
+
+    Label:
+        id: message_label
+        text: ""
+        size_hint_y: None
+        height: dp(40)
+        color: 0.2, 0.5, 0.2, 1
